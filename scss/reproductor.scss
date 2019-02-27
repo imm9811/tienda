@@ -1,0 +1,53 @@
+@keyframes fade_out {
+		
+    0%{
+        opacity:1;
+    }
+    90%{
+        opacity: 1;
+        
+    }
+    100%{
+        opacity: 0;
+                }
+}
+@keyframes fade_in {
+    0%{
+        opacity:1;
+    }
+    
+    
+    100%{
+        opacity: 1;
+    }
+}
+$color:#787878;
+    #caja{
+    border-style: groove;
+    margin-left: 2%;
+    
+    animation:fade_out 3s;
+      animation-timing-function: ease-in;
+      animation-direction: normal;
+      animation-fill-mode: forwards;
+      transition:  2s;
+
+    button{
+       background-color: $color;
+       border-radius:50%;
+       height: 40px;
+       width: 90px;
+    }
+    
+    button:enabled{
+        background-color:$color;
+        height: 30px;
+        }
+    }
+    #caja:hover{
+    
+    animation:fade_in 2s;
+      animation-timing-function: ease-in;
+      animation-direction: normal;
+      
+    }

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Registro de instrumentos 2 mano</title>
+
+	 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+
+  <link rel="icon" href="../LOGO/logobueno3.ico">
+	<link rel="stylesheet" href="estilos/colores.css">
+	<link rel="stylesheet" href="estilos/otrascosas.css">
+	<link rel="stylesheet" href="estilos/estilopruebas.css">
+
+
+
+	<style>
+
+		fieldset.scheduler-border {
+    border: 1px groove #ddd !important;
+    padding: 0 1.4em 1.4em 1.4em !important;
+    margin: 0 0 1.5em 0 !important;
+    -webkit-box-shadow:  0px 0px 0px 0px #000;
+            box-shadow:  0px 0px 0px 0px #000;
+}
+
+legend.scheduler-border {
+    font-size: 1.2em !important;
+    font-weight: bold !important;
+    text-align: left !important;
+     width:inherit; /* Or auto */
+    padding:0 10px; /* To give a bit of padding on the left and right */
+    border-bottom:none;
+}
+
+
+		#logo{
+			text-align: center;
+		}
+		form{
+			background: #DCD6D6;
+			width: 50%;
+			position: relative;
+			left: 25%;
+			padding: 5%;
+		}
+		.form-group{
+			/*background-color:#B4F4FD;
+			/*width: 50%;*/
+		}
+
+		.form-control{
+			max-width: 100%;
+		}
+
+		textarea{
+			resize: none;
+		}
+
+	</style>
+
+
+</head>
+<body>
+	
+	<div class="container">
+		<div id="logo">
+			<img src="../logo/logobueno.png" alt="logo">
+		</div>
+		
+		
+				<form method="post" enctype="multipart/form-data">
+
+				<fieldset class="scheduler-border">
+					<legend class="scheduler-border">Datos Instrumentos</legend>
+				
+				<div class="form-group">
+					
+					<label>Marca </label>
+					<input type="text" name="marca" class="form-control" required>
+				</div>
+
+				<div class="form-group">
+					<label>Modelo</label>
+	   				<input type="text" class="form-control" name="nombre" id="nombre" required>
+
+				</div>
+
+				<div class="form-group">
+					<label>Descripcion </label>
+					<textarea cols="20" rows="10" name="descripcion" class="form-control" min="20" maxlength="150" required></textarea>
+				</div>
+
+				<div class="form-group">
+					<label>Categoria</label>
+					<select name="precio_venta" class="form-control" required>
+						<option value="nada">Seleccione</option>
+						<option value="viento">Viento</option>
+						<option value="percusion">Percusión</option>
+						<option value="cuerda">Cuerda</option>
+						<option value="electronico">Electrónico</option>
+						<option value="accesorios">Accesorios</option>
+					</select>
+
+				</div>
+
+				<div class="form-group">
+					<label>Precio Venta</label>
+					<input type="text" name="precio_venta" class="form-control" accept="string/*" required>
+				</div>
+
+				<div class="form-group">
+					<label>Introduzca imagenes</label>
+					<input type=file name="fotos" multiple="multiple" accept="image/*"; capture=camera">
+				</div>
+
+        
+				</fieldset>
+
+			<input type="submit" value="Enviar datos" class="btn btn-success">
+			</form>
+		
+	</div>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container bottom_border">
+      <div class="row">
+      <div class=" col-sm-4 col-md col-sm-4  col-12 col">
+      <h5 class="headin5_amrc col_white_amrc pt2">Encuentranos</h5>
+      <!--headin5_amrc-->
+      <p class="mb10">Nos encotramos en el parque de mpresarial de Jerez de la Frontera</p>
+      <p><i class="fa fa-location-arrow"></i>Avenida exito, Edf Enterprise</p>
+      <p><i class="fa fa-phone"></i>  +34 655984523</p>
+      <p><i class="fa fa fa-envelope"><a href="factoryinstruments@gmail.com"></i> factoryinstruments@gmail.com</a> </p>
+      
+      
+      </div>
+      
+      
+        <div class=" col-sm-4 col-md  col-6 col">
+        <h5 class="headin5_amrc col_white_amrc pt2">Métodos de pago</h5>
+        <!--headin5_amrc-->
+        <ul class="footer_ul_amrc">
+        <li><a href="https://www.mastercard.es/es-es.html">MasterCard</a></li>
+        <li><a href="https://www.visaeurope.es/">Visa</a></li>
+        <li><a href="https://www.paypal.com/es/home">Paypal</a></li>
+        <li><a href="#">Transferencia bancaria</a></li>
+        <li><a href="#">Financiado</a></li>
+      </ul>
+      <!--footer_ul_amrc ends here-->
+      </div>
+      
+      
+      <div class=" col-sm-4 col-md  col-6 col">
+           <h5 class="headin5_amrc col_white_amrc pt2">Otros enlaces</h5>
+        <!--headin5_amrc-->
+        <ul class="footer_ul_amrc">
+        <li><a href="../guia de estilo/Guide Style.pdf" target="_blank">Guia de estilos</a></li>
+        <li><a href="../imagenes/imagenes.html" target="_blank">Imagenes Usadas</a></li>
+        <li><a href="#" target="_blank">Fotos</a></li>
+        <li><a href="#" target="_blank">Fotos</a></li>
+      </ul>
+      <!--footer_ul_amrc ends here-->
+      </div>
+      
+      
+      <div class=" col-sm-4 col-md  col-12 col">
+      <h5 class="headin5_amrc col_white_amrc pt2">Follow us</h5>
+      <!--headin5_amrc ends here-->
+      
+      <ul class="footer_ul_amrc">
+      <li><a href="https://www.instagram.com/factoryinstruments/" title="factoryinstruments en Instagram">
+                                <img src="imagenes/instagram.png" alt="" width="26px" height="26px"> Instagram
+                            </a>
+                        <li>
+                            <a href="#"> <img src="imagenes/facebook.png" alt="" width="26px" height="26px" > Facebook</a>
+                        </li>
+                        <li>
+                            <a href="#"> <img src="imagenes/twitter.png" alt="Twitter" width="26px" height="26px"> Twitter</a>
+                        </li>
+      </ul>
+      <!--footer_ul2_amrc ends here-->
+      </div>
+      </div>
+      </div>
+      
+      
+      <div class="container">
+      <ul class="foote_bottom_ul_amrc">
+      <li><a href="">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Pricing</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Contact</a></li>
+      </ul>
+      <!--foote_bottom_ul_amrc ends here-->
+      <p class="text-center">Copyright @2018 | Designed With by <a href="http://thefactoryinstrumentsshop.com/">The Factory Instruments Shop</a></p>
+    
+      </div>
+      
+      </footer>
+
+</body>
+</html>

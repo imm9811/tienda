@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Pedidos</title>
+
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+     <link rel="icon" href="../LOGO/logobueno3.ico">
+
+  <link rel="stylesheet" href="estilos/colores.css">
+  <link rel="stylesheet" href="estilos/otrascosas.css">
+  <link rel="stylesheet" href="estilos/estilopruebas.css">
+  <style>
+
+     aside{
+    margin-top: 20%;
+  border-radius: 69px 69px 69px 69px;
+  -moz-border-radius: 69px 69px 69px 69px;
+  -webkit-border-radius: 69px 69px 69px 69px;
+  border: 0px solid #000000;
+  background-color: #ABEBF6;
+  padding:20px;
+   }
+
+   aside a{
+    color: black;
+    text-align: center;
+   }
+   .producto a{
+      color: black;
+    }
+    .producto a:hover{
+      color: black;
+   }
+
+    aside a:hover{
+    color: black;
+   }
+  
+  .alineacion{
+    display: flex;
+    float: right;
+   }
+
+   .cuerpoPedidos{
+    margin-top: 5%;
+    margin-left: 5%;
+   }
+
+   .cabecera{
+    border-top: thick #ABEBF6 groove;
+    border-bottom: thin black groove;
+    border-left: thin black groove;
+    border-right: thin black groove;
+    background-color: #DFDFDF;
+   }
+   .producto{
+     border: thin black groove;
+     margin-top: 3%;
+     padding: 5px;
+   }
+    
+    h3{
+      font-size: medium;
+
+    }
+  button{
+    margin-top: 3%;
+  }
+  </style>
+</head>
+<body>
+	 <header>
+
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-7">
+                    <a href="index.html"><img src="imagenes/LogoTiendaPNG.png" alt="" width="200px" height="50px" style="mix-blend-mode: multiply;"></a>
+                </div>
+                <div class="col-lg-5">
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Buscar productos" aria-label="Search">
+                        <button class="btn btn-dark my-2 my-sm-0" type="submit" >Buscar</button>                        
+                    </form>
+
+                </div>
+
+
+
+            </div>
+        </div>
+        <div class="row" id="categorias">
+            <div class="col-lg-7">
+                <a href="#">Cuerda</a>
+                <a href="#">Percusión</a>
+                <a href="#">Viento</a>
+                <a href="#">Electrónicos</a>
+                <a href="#">Tradicionales</a>
+            </div>
+            <div class="col-lg-5">
+                <a href="#">Login</a>
+                <a href="#">Registro</a>
+                <a href="#"><img src="imagenes/micuenta.png" alt="" width="28px" height="28px"> Mi cuenta</a>
+                <a href="#"><img src="imagenes/carrito.png" alt="" width="40px" height="30px"> Cesta</a>
+
+            </div>
+
+        </div>
+        </div>
+    </header>
+
+<div class="container-fluid">
+ <div class="row">
+    <div class="col-lg-11">
+      <div class=" search-bar" style="text-align: right;">
+          
+          <form id="searchForm" method="post">
+              <div class="form-group">
+                <div class="alineacion">
+                  <input type="text" placeholder="Buscar por Nombre..." class="form-control" id="buscarPedido">
+                  <button type="submit" class="btn btn-primary">Buscar pedido</button>
+                </div>
+              </div>
+            </div>
+          </form>
+
+    </div>
+  </div>
+
+    <!--FIN ASIDE-->
+ 
+  <div class="row">
+
+    <div class="col-lg-2">
+      <aside>
+        <a href="#"><p>Pedidos</p></a>
+        <a href="#"><p>Pedidos cancelados</p></a>
+        <a href="#"><p>Pedidos en curso</p></a>
+      </aside>
+
+      <aside class="secundario">
+        <a href="#"><p>Pendientes</p></a>
+        <a href="#"><p>Pendientes pago</p></a>
+        <a href="#"><p>Pendientes envío</p></a>
+      </aside>
+    </div>
+    
+    <div class="col-lg-9 cuerpoPedidos">
+      <div class="row cabecera">
+          <div class="col-lg-2">
+           <i><b>Pedido Realizado</b></i>
+            <br>
+            18 de diciembre de 2018
+          </div>
+          <div class="col-lg-2">
+           <i><b> Total </b></i>
+            <br>
+            22,40€
+          </div>
+          <div class="col-lg-2">
+           <i><b>Nº Pedido</b></i>
+            <br>
+            #465-0789L
+          </div>
+          <div class="col-lg-2"></div>
+           <div class="col-lg-2">
+            <a href="../guia de estilo/Guide Style.pdf" download="Factura.pdf">Descargar Factura(Es solo la guia de estilo)</a>
+          </div>
+
+      </div>
+
+    <div class="row producto">
+      <div class="col-lg-3">
+        <h3><b>Entega el proximo Lunes 24</b></h3>
+        <a href="producto.html"><img src="imagenes/bajo1.jpg" width="120px" height="80%"></a>
+      </div>
+      <div class="col-lg-3">
+        <br><br>
+        <a href="producto.html">Yamaha TRBX174 RM</a>
+        <p>Vendido por la tienda</p>
+        <p style="color: red">210€</p>
+      </div>
+      <div class="col-lg-3">
+    
+      </div>
+      <div class="col-lg-3">
+      
+      <button class="btn btn-primary">Ver estado de envio</button>
+      
+      <button class="btn btn-secondary">Contactar con la tienda</button>
+
+      <button class="btn btn-secondary">Cancelar pedido</button>
+      </div>
+    </div>
+    </div><!--Fin row-->
+    
+
+  </div>
+  
+
+
+</div>
+
+
+  <br> 
+  <br> 
+  <br> 
+  <br> 
+  <br> 
+
+  <!-- Footer -->
+    <footer class="footer">
+      <div class="container bottom_border">
+      <div class="row">
+      <div class=" col-sm-4 col-md col-sm-4  col-12 col">
+      <h5 class="headin5_amrc col_white_amrc pt2">Encuentranos</h5>
+      <!--headin5_amrc-->
+      <p class="mb10">Nos encotramos en el parque de empresarial de Jerez de la Frontera</p>
+      <p><i class="fa fa-location-arrow"></i>Avenida exito, Edf Enterprise</p>
+      <p><i class="fa fa-phone"></i>  +34 655984523</p>
+      <p><i class="fa fa fa-envelope"><a href="factoryinstruments@gmail.com"></i> factoryinstruments@gmail.com</a> </p>
+      
+      
+      </div>
+      
+      
+        <div class=" col-sm-4 col-md  col-6 col">
+        <h5 class="headin5_amrc col_white_amrc pt2">Métodos de pago</h5>
+        <!--headin5_amrc-->
+        <ul class="footer_ul_amrc">
+        <li><a href="https://www.mastercard.es/es-es.html">MasterCard</a></li>
+        <li><a href="https://www.visaeurope.es/">Visa</a></li>
+        <li><a href="https://www.paypal.com/es/home">Paypal</a></li>
+        <li><a href="#">Transferencia bancaria</a></li>
+        <li><a href="#">Financiado</a></li>
+      </ul>
+      <!--footer_ul_amrc ends here-->
+      </div>
+      
+      
+      <div class=" col-sm-4 col-md  col-6 col">
+           <h5 class="headin5_amrc col_white_amrc pt2">Otros enlaces</h5>
+        <!--headin5_amrc-->
+        <ul class="footer_ul_amrc">
+        <li><a href="../guia de estilo/Guide Style.pdf" target="_blank">Guia de estilos</a></li>
+        <li><a href="../imagenes/imagenes.html" target="_blank">Imagenes Usadas</a></li>
+        <li><a href="#" target="_blank">Fotos</a></li>
+        <li><a href="#" target="_blank">Fotos</a></li>
+      </ul>
+      <!--footer_ul_amrc ends here-->
+      </div>
+      
+      
+      <div class=" col-sm-4 col-md  col-12">
+      <h5 class="headin5_amrc col_white_amrc pt2">Follow us</h5>
+      <!--headin5_amrc ends here-->
+      
+      <ul class="footer_ul_amrc">
+      <li><a href="https://www.instagram.com/factoryinstruments/" title="factoryinstruments en Instagram">
+                                <img src="imagenes/instagram.png" alt="" width="26px" height="26px"> Instagram
+                            </a>
+                        <li>
+                            <a href="#"> <img src="imagenes/facebook.png" alt="" width="26px" height="26px" > Facebook</a>
+                        </li>
+                        <li>
+                            <a href="#"> <img src="imagenes/twitter.png" alt="Twitter" width="26px" height="26px"> Twitter</a>
+                        </li>
+      </ul>
+      <!--footer_ul2_amrc ends here-->
+      </div>
+      </div>
+      </div>
+      
+      
+      <div class="container">
+      <ul class="foote_bottom_ul_amrc">
+      <li><a href="">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Pricing</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Contact</a></li>
+      </ul>
+      <!--foote_bottom_ul_amrc ends here-->
+      <p class="text-center">Copyright @2018 | Designed by <a href="http://thefactoryinstrumentsshop.com/">The Factory Instruments Shop</a></p>
+    
+      </div>
+      
+      </footer>
+
+</body>
+</html>

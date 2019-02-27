@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial;
+    font-size: 17px;
+  }
+  #logo{
+      background-color: aqua;
+      z-index:1;
+      position: relative;
+      color: aqua;
+  }
+  #myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+  
+  }
+  
+  .container {
+    z-index:1;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  #footer{
+    text-align: center;
+    z-index: 1;
+    color: white;
+    position: relative;
+  }
+  .precio, .nombreProducto{
+    color: aliceblue;
+    z-index: 1;
+  }

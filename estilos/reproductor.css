@@ -1,0 +1,35 @@
+@keyframes fade_out {
+  0% {
+    opacity: 1; }
+  90% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+@keyframes fade_in {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 1; } }
+#caja {
+  border-style: groove;
+  margin-left: 2%;
+  animation: fade_out 3s;
+  animation-timing-function: ease-in;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  transition: 2s; }
+  #caja button {
+    background-color: #787878;
+    border-radius: 50%;
+    height: 30px;
+    width: 40px; }
+  #caja button:enabled {
+    background-color: #787878;
+    height: 30px; }
+
+#caja:hover {
+  animation: fade_in 2s;
+  animation-timing-function: ease-in;
+  animation-direction: normal; }
+
+/*# sourceMappingURL=reproductor.css.map */
